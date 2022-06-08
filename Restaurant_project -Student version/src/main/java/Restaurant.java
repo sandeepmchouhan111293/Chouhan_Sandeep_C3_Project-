@@ -69,22 +69,9 @@ public class Restaurant {
 		return name;
 	}
 
-	/*
+	
 	//Method to calculate total order value
 	public double getTotalEstimate(List<String> itemSelected) {
-
-		if(!itemSelected.isEmpty() || !itemSelected.equals(null)) {
-		List<Item> itemList = new ArrayList<>();
-		for (String itemName : itemSelected) {
-			Item itemObject = findItemByName(itemName);
-			itemList.add(itemObject);
-		}
-			for (Item item : itemList) {
-				orderTotal = orderTotal + item.getPrice();
-			}
-			return orderTotal;
-		} else {
-			return orderTotal;
-		}
-	}*/
+		return 0.0;
+	}
 }
