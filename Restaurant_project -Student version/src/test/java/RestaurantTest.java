@@ -1,7 +1,6 @@
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.junit.jupiter.api.Assertions.fail;
 import static org.mockito.Mockito.doReturn;
 
 import java.time.LocalTime;
@@ -87,14 +86,23 @@ class RestaurantTest {
 	@Test
 	public void total_estimate_should_return_right_amount_when_items_are_selected() {
 
-		fail();
+		List<String> itemNames = Arrays.asList("Latte", "Mocha");
+
+		double expected = 450.0;
+
+		assertEquals(expected, restaurant.getTotalEstimate(itemNames));
 
 	}
 
 	@Test
 	public void total_estimate_should_return_zero_when_no_items_are_selected() {
 
-	fail();
+		List<String> itemNames = new ArrayList<>();
+
+		double expected = 0.0;
+
+		assertEquals(expected, restaurant.getTotalEstimate(itemNames));
+
 	}
 	
 }
